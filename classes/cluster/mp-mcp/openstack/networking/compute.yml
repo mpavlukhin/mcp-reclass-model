@@ -1,0 +1,53 @@
+# Openstack compute node networking template
+#
+parameters:
+  linux:
+    network:
+      interface:
+        eth1:
+          mtu: 9000
+          enabled: true
+          type: slave
+          proto: manual
+          name: ${_param:primary_first_nic}
+          master: bond0
+        eth2:
+          mtu: 9000
+          enabled: true
+          type: slave
+          proto: manual
+          name: ${_param:primary_second_nic}
+          master: bond0
+        bond0:
+          enabled: true
+          proto: manual
+          type: bond
+          use_interfaces:
+          - ${_param:primary_second_nic}
+          - ${_param:primary_first_nic}
+          slaves: ${_param:primary_second_nic} ${_param:primary_first_nic}
+          mode: active-backup
+        bond0.1:
+          name: bond0.${_param:control_vlan}
+          enabled: true
+          type: vlan
+          proto: static
+          address: ${_param:single_address}
+          netmask: ${_param:control_network_netmask}
+          use_interfaces:
+          - bond0
+        bond0.2:
+          name: bond0.${_param:tenant_vlan}
+          enabled: true
+          type: vlan
+          proto: manual
+          use_interfaces:
+          - bond0
+        br-mesh:
+          enabled: true
+          type: bridge
+          address: ${_param:tenant_address}
+          netmask: ${_param:tenant_network_netmask}
+          use_interfaces:
+          - bond0.${_param:tenant_vlan}
+      bridge: openvswitch

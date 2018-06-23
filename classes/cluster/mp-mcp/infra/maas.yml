@@ -1,0 +1,54 @@
+
+classes:
+- system.linux.system.repo.mcp.apt_mirantis.maas
+- system.maas.region.single
+- system.maas.region.boot_sources.maas_ephemeral_v3.bss_xenial
+- system.maas.region.boot_sources.maas_ephemeral_v3
+parameters:
+  _param:
+    maas_region_port: 5240
+    maas_cluster_region_port: ${_param:maas_region_port}
+    maas_name: ${_param:infra_config_hostname}
+    maas_gateway: 10.0.0.1
+  maas:
+    region:
+      commissioning_scripts:
+        00-maas-05-simplify-network-interfaces: /etc/maas/files/commisioning_scripts/00-maas-05-simplify-network-interfaces
+      bind:
+        host: ${_param:deploy_address}:${_param:maas_region_port}
+      maas_config:
+        maas_name: ${_param:maas_name}
+      subnets:
+        10.0.0.0/24:
+          cidr: 10.0.0.0/24
+          fabric: fabric-0
+          gateway_ip: ${_param:maas_gateway}
+          iprange:
+            end: 10.0.0.254
+            start: 10.0.0.1
+      fabrics:
+        fabric-0:
+          description: Fabric for deploy_network
+          vlan:
+            0:
+              description: "Deploy VLAN"
+              dhcp: True
+      machines:
+        <<LOAD_FROM_FILE>>
+    cluster:
+      region:
+        host: ${_param:deploy_address}:${_param:maas_cluster_region_port}
+# linux:
+#   network:
+#     interface:
+#       primary_interface:
+#         enabled: true
+#         name: ens2
+#         type: eth
+#         proto: static
+#         netmask: ${_param:deploy_network_netmask}
+#         address: ${_param:single_address}
+#         gateway: ${_param:deploy_network_gateway}
+#         name_servers:
+#         - ${_param:dns_server01}
+#         - ${_param:dns_server02}

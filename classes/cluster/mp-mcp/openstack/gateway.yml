@@ -1,0 +1,19 @@
+
+classes:
+- system.linux.system.repo.mcp.extra
+- system.linux.system.repo.mcp.apt_mirantis.openstack
+- system.linux.system.repo.mcp.apt_mirantis.ubuntu
+- system.linux.system.repo.mcp.apt_mirantis.saltstack
+- system.neutron.gateway.cluster
+- system.neutron.gateway.notification.messagingv2
+- cluster.mp-mcp.infra
+- cluster.mp-mcp.openstack.networking.gateway
+parameters:
+  _param:
+    interface_mtu: 1500
+    cluster_vip_address: ${_param:openstack_control_address}
+    linux_system_codename: xenial
+    keepalived_vip_interface: br-ctl
+    keepalived_vip_virtual_router_id: 69
+    primary_first_nic: eth1
+    primary_second_nic: eth2

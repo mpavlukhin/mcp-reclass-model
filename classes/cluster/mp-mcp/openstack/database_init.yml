@@ -1,0 +1,10 @@
+classes:
+- system.mysql.client.single
+# uncomment the commented lines in case of Openstack upgrade
+#- system.mysql.client.single_upgrade
+#- cluster.deployment_name.infra.backup.client_common
+- cluster.mp-mcp.infra.backup.client_mysql
+##parameters:
+#  xtrabackup:
+#    client:
+#      cron: false

@@ -1,0 +1,11 @@
+classes:
+- service.keepalived.cluster.single
+- system.glusterfs.server.cluster
+- system.glusterfs.server.volume.salt_pki
+- system.glusterfs.server.volume.glance
+- system.glusterfs.server.volume.keystone
+- system.glusterfs.server.volume.backup
+parameters:
+  _param:
+    keepalived_vip_interface: br-ctl
+    keepalived_vip_virtual_router_id: 69
