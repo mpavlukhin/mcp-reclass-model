@@ -28,7 +28,7 @@ parameters:
           - ${_param:primary_first_nic}
           - ${_param:primary_second_nic}
           slaves: ${_param:primary_first_nic} ${_param:primary_second_nic}
-          mode: active-backup
+#          mode: active-backup
         br-floating:
           enabled: true
           type: ovs_bridge

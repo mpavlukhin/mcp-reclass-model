@@ -23,7 +23,7 @@ classes:
 - system.jenkins.client.job.deploy.openstack
 - cluster.mp-mcp.infra.maas
 - cluster.mp-mcp.infra
-- cluster.mp-mcp.infra.backup.client_common
+#- cluster.mp-mcp.infra.backup.client_common
 - cluster.mp-mcp.infra.networking.config
 parameters:
   _param:
@@ -63,9 +63,9 @@ parameters:
       reactor:
         reclass/minion/classify:
         - salt://reclass/reactor/node_register.sls
-      backup: true
+#      backup: true
     minion:
-      backup: true
+#      backup: true
   reclass:
     storage:
       data_source:
@@ -85,7 +85,7 @@ parameters:
             linux_system_codename: xenial
         infra_kvm_node03:
           classes:
-          - cluster.${_param:cluster_name}.infra.backup.server
+#          - cluster.${_param:cluster_name}.infra.backup.server
           - cluster.mp-mcp.infra.glusterfs
           params:
             keepalived_vip_priority: 102
