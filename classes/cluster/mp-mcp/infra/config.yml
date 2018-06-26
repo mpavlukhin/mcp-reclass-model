@@ -71,25 +71,25 @@ parameters:
       data_source:
         engine: local
       node:
-        infra_kvm_node01:
-          classes:
+        # infra_kvm_node01:
+        #   classes:
 #          - cluster.mp-mcp.infra.glusterfs
-          params:
-            keepalived_vip_priority: 100
-            linux_system_codename: xenial
-        infra_kvm_node02:
-          classes:
+        #   params:
+        #     keepalived_vip_priority: 100
+        #     linux_system_codename: xenial
+        # infra_kvm_node02:
+        #   classes:
 #          - cluster.mp-mcp.infra.glusterfs
-          params:
-            keepalived_vip_priority: 101
-            linux_system_codename: xenial
-        infra_kvm_node03:
-          classes:
+        #   params:
+        #     keepalived_vip_priority: 101
+        #     linux_system_codename: xenial
+        # infra_kvm_node03:
+        #   classes:
 #          - cluster.${_param:cluster_name}.infra.backup.server
 #          - cluster.mp-mcp.infra.glusterfs
-          params:
-            keepalived_vip_priority: 102
-            linux_system_codename: xenial
+          # params:
+          #   keepalived_vip_priority: 102
+          #   linux_system_codename: xenial
         openstack_control_node01:
           params:
             linux_system_codename: xenial
