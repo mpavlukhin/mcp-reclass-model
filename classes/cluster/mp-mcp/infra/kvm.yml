@@ -4,7 +4,7 @@ classes:
 - system.linux.system.repo.mcp.apt_mirantis.openstack
 - system.linux.system.repo.mcp.apt_mirantis.ubuntu
 - system.linux.system.repo.mcp.apt_mirantis.saltstack
-- system.linux.system.repo.mcp.apt_mirantis.glusterfs
+#- system.linux.system.repo.mcp.apt_mirantis.glusterfs
 - system.salt.control.virt
 - system.salt.control.cluster.openstack_control_cluster
 - system.salt.control.cluster.openstack_proxy_cluster

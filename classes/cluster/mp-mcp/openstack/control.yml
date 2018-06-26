@@ -3,7 +3,7 @@ classes:
 - system.linux.system.repo.mcp.apt_mirantis.openstack
 - system.linux.system.repo.mcp.apt_mirantis.ubuntu
 - system.linux.system.repo.mcp.apt_mirantis.saltstack
-- system.linux.system.repo.mcp.apt_mirantis.glusterfs
+#- system.linux.system.repo.mcp.apt_mirantis.glusterfs
 - system.memcached.server.single
 - system.neutron.control.openvswitch.cluster
 - system.keystone.server.cluster
@@ -21,9 +21,9 @@ classes:
 - system.heat.server.notification.messagingv2
 - system.haproxy.proxy.listen.openstack.nova-placement
 - system.haproxy.proxy.listen.openstack.glare
-- system.glusterfs.client.cluster
-- system.glusterfs.client.volume.keystone
-- system.glusterfs.client.volume.glance
+#- system.glusterfs.client.cluster
+# system.glusterfs.client.volume.keystone
+#- system.glusterfs.client.volume.glance
 - cluster.mp-mcp.infra
 - cluster.mp-mcp.openstack.networking.virtual
 parameters:

@@ -52,9 +52,9 @@ parameters:
     infra_kvm_node02_hostname: kvm02
     infra_kvm_node03_hostname: kvm03
 
-    glusterfs_node01_address: ${_param:infra_kvm_node01_address}
-    glusterfs_node02_address: ${_param:infra_kvm_node02_address}
-    glusterfs_node03_address: ${_param:infra_kvm_node03_address}
+#    glusterfs_node01_address: ${_param:infra_kvm_node01_address}
+#    glusterfs_node02_address: ${_param:infra_kvm_node02_address}
+#    glusterfs_node03_address: ${_param:infra_kvm_node03_address}
     linux_dhcp_interface:
       enabled: true
       type: eth

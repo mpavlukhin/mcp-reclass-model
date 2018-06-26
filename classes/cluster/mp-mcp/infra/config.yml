@@ -3,10 +3,10 @@ classes:
 - system.linux.system.repo.mcp.extra
 - system.linux.system.repo.mcp.apt_mirantis.openstack
 - system.linux.system.repo.mcp.apt_mirantis.ubuntu
-- system.linux.system.repo.mcp.apt_mirantis.glusterfs
+#- system.linux.system.repo.mcp.apt_mirantis.glusterfs
 - system.linux.system.repo.mcp.apt_mirantis.saltstack
-- system.glusterfs.client.cluster
-- system.glusterfs.client.volume.salt_pki
+#- system.glusterfs.client.cluster
+#- system.glusterfs.client.volume.salt_pki
 - system.salt.master.pkg
 - system.salt.minion.ca.salt_master
 - system.salt.master.api
@@ -73,20 +73,20 @@ parameters:
       node:
         infra_kvm_node01:
           classes:
-          - cluster.mp-mcp.infra.glusterfs
+#          - cluster.mp-mcp.infra.glusterfs
           params:
             keepalived_vip_priority: 100
             linux_system_codename: xenial
         infra_kvm_node02:
           classes:
-          - cluster.mp-mcp.infra.glusterfs
+#          - cluster.mp-mcp.infra.glusterfs
           params:
             keepalived_vip_priority: 101
             linux_system_codename: xenial
         infra_kvm_node03:
           classes:
 #          - cluster.${_param:cluster_name}.infra.backup.server
-          - cluster.mp-mcp.infra.glusterfs
+#          - cluster.mp-mcp.infra.glusterfs
           params:
             keepalived_vip_priority: 102
             linux_system_codename: xenial
