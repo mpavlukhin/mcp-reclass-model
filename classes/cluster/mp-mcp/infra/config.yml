@@ -127,24 +127,24 @@ parameters:
         # openstack_proxy_node02:
         #   params:
         #     linux_system_codename: xenial
-        openstack_compute_rack01:
-          name: ${_param:openstack_compute_rack01_hostname}<<count>>
-          domain: ${_param:cluster_domain}
-          classes:
-          - cluster.${_param:cluster_name}.openstack.compute
-          repeat:
-            count: 100
-            start: 1
-            digits: 3
-            params:
-              single_address:
-                value: ${_param:openstack_compute_rack01_single_subnet}.<<count>>
-                start: 101
-              tenant_address:
-                value: ${_param:openstack_compute_rack01_tenant_subnet}.<<count>>
-                start: 101
-          params:
-            salt_master_host: ${_param:reclass_config_master}
-            linux_system_codename: xenial
+        # openstack_compute_rack01:
+        #   name: ${_param:openstack_compute_rack01_hostname}<<count>>
+        #   domain: ${_param:cluster_domain}
+        #   classes:
+        #   - cluster.${_param:cluster_name}.openstack.compute
+        #   repeat:
+        #     count: 100
+        #     start: 1
+        #     digits: 3
+        #     params:
+        #       single_address:
+        #         value: ${_param:openstack_compute_rack01_single_subnet}.<<count>>
+        #         start: 101
+        #       tenant_address:
+        #         value: ${_param:openstack_compute_rack01_tenant_subnet}.<<count>>
+        #         start: 101
+        #   params:
+        #     salt_master_host: ${_param:reclass_config_master}
+        #     linux_system_codename: xenial
 
 

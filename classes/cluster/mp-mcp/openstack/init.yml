@@ -110,9 +110,9 @@ parameters:
     openstack_gateway_node03_tenant_address: 10.0.2.8
 
     # OpenStack Compute
-    openstack_compute_rack01_single_subnet: 10.0.1
-    openstack_compute_rack01_tenant_subnet: 10.0.2
-    openstack_compute_rack01_hostname: cmp
+    # openstack_compute_rack01_single_subnet: 10.0.1
+    # openstack_compute_rack01_tenant_subnet: 10.0.2
+    # openstack_compute_rack01_hostname: cmp
 
     # openstack service hostnames
     openstack_proxy_hostname: prx
