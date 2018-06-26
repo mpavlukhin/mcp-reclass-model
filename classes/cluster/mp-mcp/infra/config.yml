@@ -121,12 +121,12 @@ parameters:
         openstack_message_queue_node03:
           params:
             linux_system_codename: xenial
-        openstack_proxy_node01:
-          params:
-            linux_system_codename: xenial
-        openstack_proxy_node02:
-          params:
-            linux_system_codename: xenial
+        # openstack_proxy_node01:
+        #   params:
+        #     linux_system_codename: xenial
+        # openstack_proxy_node02:
+        #   params:
+        #     linux_system_codename: xenial
         openstack_compute_rack01:
           name: ${_param:openstack_compute_rack01_hostname}<<count>>
           domain: ${_param:cluster_domain}

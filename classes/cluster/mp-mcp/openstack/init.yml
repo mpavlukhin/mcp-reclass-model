@@ -86,8 +86,8 @@ parameters:
 
     # openstack service addresses
     openstack_proxy_address: 10.0.1.80
-    openstack_proxy_node01_address: 10.0.1.81
-    openstack_proxy_node02_address: 10.0.1.82
+    # openstack_proxy_node01_address: 10.0.1.81
+    # openstack_proxy_node02_address: 10.0.1.82
     openstack_control_address: 10.0.1.10
     openstack_control_node01_address: 10.0.1.11
     openstack_control_node02_address: 10.0.1.12
@@ -116,8 +116,8 @@ parameters:
 
     # openstack service hostnames
     openstack_proxy_hostname: prx
-    openstack_proxy_node01_hostname: prx01
-    openstack_proxy_node02_hostname: prx02
+    # openstack_proxy_node01_hostname: prx01
+    # openstack_proxy_node02_hostname: prx02
     openstack_control_hostname: ctl
     openstack_control_node01_hostname: ctl01
     openstack_control_node02_hostname: ctl02
@@ -155,16 +155,16 @@ parameters:
           names:
           - ${_param:openstack_proxy_hostname}
           - ${_param:openstack_proxy_hostname}.${_param:cluster_domain}
-        prx01:
-          address: ${_param:openstack_proxy_node01_address}
-          names:
-          - ${_param:openstack_proxy_node01_hostname}
-          - ${_param:openstack_proxy_node01_hostname}.${_param:cluster_domain}
-        prx02:
-          address: ${_param:openstack_proxy_node02_address}
-          names:
-          - ${_param:openstack_proxy_node02_hostname}
-          - ${_param:openstack_proxy_node02_hostname}.${_param:cluster_domain}
+        # prx01:
+        #   address: ${_param:openstack_proxy_node01_address}
+        #   names:
+        #   - ${_param:openstack_proxy_node01_hostname}
+        #   - ${_param:openstack_proxy_node01_hostname}.${_param:cluster_domain}
+        # prx02:
+        #   address: ${_param:openstack_proxy_node02_address}
+        #   names:
+        #   - ${_param:openstack_proxy_node02_hostname}
+        #   - ${_param:openstack_proxy_node02_hostname}.${_param:cluster_domain}
         ctl:
           address: ${_param:openstack_control_address}
           names:
