@@ -21,7 +21,7 @@ classes:
 - service.jenkins.client
 - system.jenkins.client.credential.salt
 - system.jenkins.client.job.deploy.openstack
-- cluster.mp-mcp.infra.maas
+#- cluster.mp-mcp.infra.maas
 - cluster.mp-mcp.infra
 #- cluster.mp-mcp.infra.backup.client_common
 - cluster.mp-mcp.infra.networking.config

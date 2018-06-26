@@ -39,8 +39,8 @@ parameters:
     deploy_network_gateway: 10.0.0.1
 
     # MaaS parameters
-    infra_maas_node01_deploy_address: ${_param:infra_config_deploy_address}
-    infra_maas_node01_hostname: ${_param:infra_config_hostname}
+    # infra_maas_node01_deploy_address: ${_param:infra_config_deploy_address}
+    # infra_maas_node01_hostname: ${_param:infra_config_hostname}
     # infra_kvm_address: 10.0.1.240
     # infra_kvm_node01_address: 10.0.1.241
     # infra_kvm_node02_address: 10.0.1.242
