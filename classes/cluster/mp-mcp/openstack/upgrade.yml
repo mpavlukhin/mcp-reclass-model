@@ -22,10 +22,10 @@ parameters:
   _param:
     nova_vncproxy_url: http://${_param:openstack_proxy_address}:6080
     # openstack_message_queue_node01_address: ${_param:openstack_upgrade_node01_address}
-    cluster_local_address: ${_param:openstack_upgrade_node01_address}
-    cluster_vip_address: ${_param:openstack_upgrade_node01_address}
-    openstack_control_address: ${_param:openstack_upgrade_node01_address}
-    public_address: ${_param:openstack_upgrade_node01_address}
+    # cluster_local_address: ${_param:openstack_upgrade_node01_address}
+    # cluster_vip_address: ${_param:openstack_upgrade_node01_address}
+    # openstack_control_address: ${_param:openstack_upgrade_node01_address}
+    # public_address: ${_param:openstack_upgrade_node01_address}
     cluster_public_protocol: http
     openstack_version: pike
   glance:

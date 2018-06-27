@@ -100,8 +100,8 @@ parameters:
     # openstack_message_queue_node01_address: 10.0.1.41
     # openstack_message_queue_node02_address: 10.0.1.42
     # openstack_message_queue_node03_address: 10.0.1.43
-    openstack_upgrade_node01_hostname: upg01
-    openstack_upgrade_node01_address: 10.0.1.19
+    # openstack_upgrade_node01_hostname: upg01
+    # openstack_upgrade_node01_address: 10.0.1.19
     openstack_gateway_node01_address: 10.0.1.224
     openstack_gateway_node02_address: 10.0.1.225
     openstack_gateway_node03_address: 10.0.1.226
@@ -225,11 +225,11 @@ parameters:
         #   names:
         #   - ${_param:openstack_database_node03_hostname}
         #   - ${_param:openstack_database_node03_hostname}.${_param:cluster_domain}
-        upg01:
-          address: ${_param:openstack_upgrade_node01_address}
-          names:
-          - ${_param:openstack_upgrade_node01_hostname}
-          - ${_param:openstack_upgrade_node01_hostname}.${_param:cluster_domain}
+        # upg01:
+        #   address: ${_param:openstack_upgrade_node01_address}
+        #   names:
+        #   - ${_param:openstack_upgrade_node01_hostname}
+        #   - ${_param:openstack_upgrade_node01_hostname}.${_param:cluster_domain}
         gtw01:
           address: ${_param:openstack_gateway_node01_address}
           names:
