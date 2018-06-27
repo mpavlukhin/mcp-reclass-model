@@ -112,15 +112,15 @@ parameters:
         openstack_database_node03:
           params:
             linux_system_codename: xenial
-        openstack_message_queue_node01:
-          params:
-            linux_system_codename: xenial
-        openstack_message_queue_node02:
-          params:
-            linux_system_codename: xenial
-        openstack_message_queue_node03:
-          params:
-            linux_system_codename: xenial
+        # openstack_message_queue_node01:
+        #   params:
+        #     linux_system_codename: xenial
+        # openstack_message_queue_node02:
+        #   params:
+        #     linux_system_codename: xenial
+        # openstack_message_queue_node03:
+        #   params:
+        #     linux_system_codename: xenial
         # openstack_proxy_node01:
         #   params:
         #     linux_system_codename: xenial

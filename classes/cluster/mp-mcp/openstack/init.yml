@@ -97,9 +97,9 @@ parameters:
     openstack_database_node02_address: 10.0.1.52
     openstack_database_node03_address: 10.0.1.53
     openstack_message_queue_address: 10.0.1.40
-    openstack_message_queue_node01_address: 10.0.1.41
-    openstack_message_queue_node02_address: 10.0.1.42
-    openstack_message_queue_node03_address: 10.0.1.43
+    # openstack_message_queue_node01_address: 10.0.1.41
+    # openstack_message_queue_node02_address: 10.0.1.42
+    # openstack_message_queue_node03_address: 10.0.1.43
     openstack_upgrade_node01_hostname: upg01
     openstack_upgrade_node01_address: 10.0.1.19
     openstack_gateway_node01_address: 10.0.1.224
@@ -127,9 +127,9 @@ parameters:
     openstack_database_node02_hostname: dbs02
     openstack_database_node03_hostname: dbs03
     openstack_message_queue_hostname: msg
-    openstack_message_queue_node01_hostname: msg01
-    openstack_message_queue_node02_hostname: msg02
-    openstack_message_queue_node03_hostname: msg03
+    # openstack_message_queue_node01_hostname: msg01
+    # openstack_message_queue_node02_hostname: msg02
+    # openstack_message_queue_node03_hostname: msg03
     openstack_gateway_node01_hostname: gtw01
     openstack_gateway_node02_hostname: gtw02
     openstack_gateway_node03_hostname: gtw03
@@ -190,21 +190,21 @@ parameters:
           names:
           - ${_param:openstack_message_queue_hostname}
           - ${_param:openstack_message_queue_hostname}.${_param:cluster_domain}
-        msg01:
-          address: ${_param:openstack_message_queue_node01_address}
-          names:
-          - ${_param:openstack_message_queue_node01_hostname}
-          - ${_param:openstack_message_queue_node01_hostname}.${_param:cluster_domain}
-        msg02:
-          address: ${_param:openstack_message_queue_node02_address}
-          names:
-          - ${_param:openstack_message_queue_node02_hostname}
-          - ${_param:openstack_message_queue_node02_hostname}.${_param:cluster_domain}
-        msg03:
-          address: ${_param:openstack_message_queue_node03_address}
-          names:
-          - ${_param:openstack_message_queue_node03_hostname}
-          - ${_param:openstack_message_queue_node03_hostname}.${_param:cluster_domain}
+        # msg01:
+        #   address: ${_param:openstack_message_queue_node01_address}
+        #   names:
+        #   - ${_param:openstack_message_queue_node01_hostname}
+        #   - ${_param:openstack_message_queue_node01_hostname}.${_param:cluster_domain}
+        # msg02:
+        #   address: ${_param:openstack_message_queue_node02_address}
+        #   names:
+        #   - ${_param:openstack_message_queue_node02_hostname}
+        #   - ${_param:openstack_message_queue_node02_hostname}.${_param:cluster_domain}
+        # msg03:
+        #   address: ${_param:openstack_message_queue_node03_address}
+        #   names:
+        #   - ${_param:openstack_message_queue_node03_hostname}
+        #   - ${_param:openstack_message_queue_node03_hostname}.${_param:cluster_domain}
         dbs:
           address: ${_param:openstack_database_address}
           names:
