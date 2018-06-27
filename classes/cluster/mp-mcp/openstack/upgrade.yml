@@ -34,39 +34,39 @@ parameters:
         client_glance_key: ${_param:glance_storage_client_key}
   keystone:
     server:
-      database:
-        host: ${_param:openstack_database_address}
-        name: 'keystone_upgrade'
+      # database:
+      #   host: ${_param:openstack_database_address}
+      #   name: 'keystone_upgrade'
   glance:
     server:
-      database:
-        host: ${_param:openstack_database_address}
-        name: glance_upgrade
+      # database:
+      #   host: ${_param:openstack_database_address}
+      #   name: glance_upgrade
   neutron:
     server:
-      database:
-        host: ${_param:openstack_database_address}
-        name: neutron_upgrade
+      # database:
+      #   host: ${_param:openstack_database_address}
+      #   name: neutron_upgrade
   cinder:
     controller:
-      database:
-        host: ${_param:openstack_database_address}
-        name: cinder_upgrade
+      # database:
+      #   host: ${_param:openstack_database_address}
+      #   name: cinder_upgrade
     volume:
-      database:
-        host: ${_param:openstack_database_address}
-        name: cinder_upgrade
+      # database:
+      #   host: ${_param:openstack_database_address}
+      #   name: cinder_upgrade
   nova:
     controller:
       update_cells: true
-      database:
-        host: ${_param:openstack_database_address}
-        name: nova_upgrade
+      # database:
+      #   host: ${_param:openstack_database_address}
+      #   name: nova_upgrade
   heat:
     server:
-      database:
-        engine: mysql
-        host: ${_param:openstack_database_address}
-        port: 3306
-        name: heat_upgrade
-        user: heat
+      # database:
+      #   engine: mysql
+      #   host: ${_param:openstack_database_address}
+      #   port: 3306
+      #   name: heat_upgrade
+      #   user: heat

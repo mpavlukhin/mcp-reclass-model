@@ -101,17 +101,17 @@ parameters:
         openstack_control_node03:
           params:
             linux_system_codename: xenial
-        openstack_database_node01:
-          params:
-            linux_system_codename: xenial
-          classes:
-          - cluster.${_param:cluster_name}.openstack.database_init
-        openstack_database_node02:
-          params:
-            linux_system_codename: xenial
-        openstack_database_node03:
-          params:
-            linux_system_codename: xenial
+        # openstack_database_node01:
+        #   params:
+        #     linux_system_codename: xenial
+        #   classes:
+        #   - cluster.${_param:cluster_name}.openstack.database_init
+        # openstack_database_node02:
+        #   params:
+        #     linux_system_codename: xenial
+        # openstack_database_node03:
+        #   params:
+        #     linux_system_codename: xenial
         # openstack_message_queue_node01:
         #   params:
         #     linux_system_codename: xenial
