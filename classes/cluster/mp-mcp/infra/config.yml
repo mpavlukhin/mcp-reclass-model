@@ -63,9 +63,9 @@ parameters:
       reactor:
         reclass/minion/classify:
         - salt://reclass/reactor/node_register.sls
-#      backup: true
+     backup: true
     minion:
-#      backup: true
+     backup: true
   reclass:
     storage:
       data_source:
@@ -90,17 +90,44 @@ parameters:
           # params:
           #   keepalived_vip_priority: 102
           #   linux_system_codename: xenial
+      node:
         openstack_control_node01:
+          classes:
+            - service.galera.master.cluster
           params:
             linux_system_codename: xenial
+            mysql_cluster_role: master
           classes:
           - cluster.${_param:cluster_name}.openstack.control_init
         openstack_control_node02:
+          classes:
+            - service.galera.master.cluster
           params:
             linux_system_codename: xenial
+            mysql_cluster_role: slave
         openstack_control_node03:
+          classes:
+            - service.galera.master.cluster
           params:
             linux_system_codename: xenial
+            mysql_cluster_role: slave
+          params:
+            linux_system_codename: xenial
+        openstack_compute_node01:
+          params:
+            single_address: 172.16.10.15
+            tenant_address: 10.1.0.15
+            external_address: 10.16.0.15
+        openstack_compute_node02:
+          params:
+            single_address: 172.16.10.16
+            tenant_address: 10.1.0.16
+            external_address: 10.16.0.16
+        openstack_gateway_node01:
+          params:
+            single_address: 172.16.10.20
+            tenant_address: 10.1.0.20
+            external_address: 10.16.0.20
         # openstack_database_node01:
         #   params:
         #     linux_system_codename: xenial
