@@ -1,0 +1,32 @@
+classes:
+- system.linux.system.repo.mcp.apt_mirantis.ubuntu
+- system.linux.system.repo.mcp.apt_mirantis.saltstack
+- system.linux.system.repo.mcp.apt_mirantis.openstack
+- system.linux.system.repo.mcp.extra
+- system.nova.compute.cluster
+- system.nova.compute.notification.messagingv2
+- system.neutron.compute.cluster
+- system.linux.network.dynamic_hosts
+- cluster.gz-mcp.infra
+- cluster.gz-mcp.openstack.networking.compute
+parameters:
+  _param:
+    primary_interface: ens4
+    tenant_interface: ens5
+    external_interface: ens6
+    interface_mtu: 1500
+    linux_system_codename: xenial
+  nova:
+    compute:
+      vncproxy_url: http://${_param:cluster_vip_address}:6080
+      notification:
+        driver: messagingv2
+        topics: "notifications,${_param:stacklight_notification_topic}"
+        notify_on:
+          state_change: vm_and_task_state
+      message_queue:
+        members:
+          - host: ${_param:openstack_control_node01_address}
+          - host: ${_param:openstack_control_node02_address}
+          - host: ${_param:openstack_control_node03_address}
+          
