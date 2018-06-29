@@ -134,8 +134,8 @@ parameters:
     openstack_gateway_node02_hostname: gtw02
     openstack_gateway_node03_hostname: gtw03
 
-    openstack_benchmark_node01_hostname: bmk01
-    openstack_benchmark_node01_address: 10.0.1.95
+    # openstack_benchmark_node01_hostname: bmk01
+    # openstack_benchmark_node01_address: 10.0.1.95
     openstack_log_appender: true
     openstack_fluentd_handler_enabled: true
     # Billing
