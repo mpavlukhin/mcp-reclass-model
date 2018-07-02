@@ -21,8 +21,8 @@ parameters:
     infra_config_hostname: cfg01
     salt_minion_ca_host: ${_param:infra_config_hostname}.${_param:cluster_domain}
     # infra service addresses
-    infra_config_address: 10.1.0.90
-    infra_config_deploy_address: 172.17.52.106
+    infra_config_address: 172.16.10.100
+    # infra_config_deploy_address: 172.17.52.106
 
     cluster_domain: mp-mcp-networking.local
     cluster_name: mp-mcp
@@ -36,7 +36,7 @@ parameters:
     tenant_vlan: 20
 
     deploy_network_netmask: 255.255.255.0
-    deploy_network_gateway: 10.0.0.1
+    # deploy_network_gateway: 10.0.0.1
 
     # MaaS parameters
     # infra_maas_node01_deploy_address: ${_param:infra_config_deploy_address}
