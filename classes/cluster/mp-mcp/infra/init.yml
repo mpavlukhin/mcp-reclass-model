@@ -22,7 +22,7 @@ parameters:
     salt_minion_ca_host: ${_param:infra_config_hostname}.${_param:cluster_domain}
     # infra service addresses
     infra_config_address: 172.16.10.100
-    # infra_config_deploy_address: 172.17.52.106
+    infra_config_deploy_address: 10.1.0.90
 
     cluster_domain: mp-mcp-networking.local
     cluster_name: mp-mcp
