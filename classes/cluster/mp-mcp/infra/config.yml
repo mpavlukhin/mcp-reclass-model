@@ -25,6 +25,7 @@ classes:
 - cluster.mp-mcp.infra
 #- cluster.mp-mcp.infra.backup.client_common
 - cluster.mp-mcp.infra.networking.config
+- cluster.mp-mcp._team
 parameters:
   _param:
     salt_master_base_environment: prd

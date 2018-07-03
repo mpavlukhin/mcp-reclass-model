@@ -1,0 +1,22 @@
+parameters:
+  linux:
+    system:
+      user:
+        mpavlukhin:
+          enabled: true
+          name: mpavlukhin
+          sudo: true
+          full_name: Max Pavlukhin
+          home: /home/mpavlukhin
+  openssh:
+    server:
+      enabled: true
+      user:
+        mpavlukhin:
+          enabled: true
+          public_keys:
+          - ${public_keys:mpavlukhin}
+          user: ${linux:system:user:mpavlukhin}
+  public_keys:
+    mpavlukhin:
+      key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsXY0FZWNLi3dD9antING/FNSNRBjOx34qBttEW+R82ID8qnZCqC9ziZF4orAMcCWbG6FrLNC13sqwXQEqa+28FyQ3OuWs7x7i2c40zI1r5begeCgoIxlNpUSPSVlG6jHrlSjKpBwNqaZiiUvfRDPzE7wJwzU7Sf5StkUm1MQVU+aCawdoqk6yA2vQ/NWkNJ+k49oRyb6KfrbUWEkay6RB9M+ETDe1dzbqWZW3ZzS94V7Qd4bwb+qB7m+485aqlPNfzk1iJzgDPZX1va9sifK/CgVW3bLyy//anDoE7s8O0C9mXGHdw9RbaSzPgDepB6d8iceyHgcz9BYgTgBwBdeN max@ubuntu
