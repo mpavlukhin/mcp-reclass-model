@@ -63,9 +63,9 @@ parameters:
       reactor:
         reclass/minion/classify:
         - salt://reclass/reactor/node_register.sls
-     backup: true
+      backup: true
     minion:
-     backup: true
+      backup: true
   reclass:
     storage:
       data_source:
